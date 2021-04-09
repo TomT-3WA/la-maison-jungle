@@ -19,7 +19,7 @@ function ShoppingList() {
             <li key={plant.id}>
               <div>
                 {plant.name}
-                {plant.isBestSale ? <span>🔥</span> : <span>👎</span>}
+                {plant.isBestSale || plant.category === 'classique' && <span>🔥</span>}
               </div>
             </li>
         ))}
